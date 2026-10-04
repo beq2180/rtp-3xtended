@@ -24,7 +24,7 @@ public final class RTPManager {
             case NORMAL -> "overworld";
             case NETHER -> "nether";
             case THE_END -> "end";
-            default -> "overworld:;
+            default -> "overworld":;
         };
         int min = Math.max(0, plugin.getConfig().getInt("rtp." + key + ".min-radius", 500));
         int max = Math.max(min + 1, plugin.getConfig().getInt("rtp." + key + ".max-radius", 5000));
