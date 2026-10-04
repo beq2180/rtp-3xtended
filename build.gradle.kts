@@ -19,6 +19,6 @@ java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 }
 
-assemble {
-    dependsOn("reobfJar")
+tasks.named("assemble") {
+    dependsOn(reobfjar")
 }
