@@ -33,7 +33,7 @@ public final class RTPCommand implements CommandExecutor, TabCompleter {
         return true;
     }
 
-    private String pretty(World.Environment env) { return switch (env) { case NORMAL -> "the Overworld"; case NETHER -> "the Nether"; case THE_END -> "the End"; }; }
+    private String pretty(World.Environment env) { return switch (env) { case NORMAL -> "the Overworld"; case NETHER -> "the Nether"; case THE_END -> "the End"; case CUSTOM -> "a Custom World"; }; }
     @Override public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         if (args.length != 1) return List.of();
         return List.of("o", "n", "e", "overworld", "nether", "end").stream().filter(s -> s.startsWith(args[0].toLowerCase())).toList();
